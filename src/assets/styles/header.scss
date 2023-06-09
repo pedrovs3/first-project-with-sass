@@ -1,0 +1,26 @@
+@import "variables";
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 90vw;
+  justify-content: space-between;
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+
+    li {
+      padding: 10px 20px;
+      border-radius: 6px;
+    }
+    li:hover {
+      background: #f9f9f9;
+    }
+  }
+}
+
+.logo {
+  color: $brand-color-red;
+}
