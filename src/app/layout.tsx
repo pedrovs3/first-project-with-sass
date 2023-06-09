@@ -1,7 +1,8 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+import '@/assets/styles/globals.css'
+import {dmSans} from "@/config/fonts";
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
+// const dmSans = DM_Sans({weight: ['700', '500', '400'], subsets: ['latin']})
 
 export const metadata = {
   title: 'Create Next App',
@@ -14,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-br">
+      <body className={dmSans.className}>{children}</body>
     </html>
   )
 }
