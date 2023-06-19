@@ -1,0 +1,75 @@
+@import "variables";
+
+@font-face {
+  font-family: "CreditNumber";
+  src: url("../../config/external/OCR-A_Regular.ttf");
+}
+
+.cards_container {
+  display: flex;
+  padding-top: 200px;
+  align-items: start;
+  justify-content: center;
+}
+
+.card {
+  height: 300px;
+  width: 500px;
+  color: #FFFFFF;
+  mask-image: url("../../../public/noise.avif");
+  background: $gradient-color-dark, url("../../../public/noise.avif");
+  background-size: cover;
+  background-clip: content-box;
+  border-radius: 15px;
+  transform: rotate(90deg);
+  animation: movCard 3s infinite;
+  div {
+    padding: 25px;
+    height: 100%;
+    font-size: 24px;
+    .first_row {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: fit-content;
+      img {
+        transform: rotate(-90deg);
+      }
+    }
+    .second_row {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      justify-content: space-between;
+      letter-spacing: 5px;
+      height: fit-content;
+      width: 100%;
+      font-family: 'CreditNumber', serif;
+      font-size: 24px;
+    }
+    .tertiary_row {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: fit-content;
+      img {
+        transform: rotate(-90deg) translateY(-20px);
+      }
+    }
+  }
+}
+
+@keyframes movCard {
+  0% {
+    transform: scale(1) rotate(90deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(87deg);
+  }
+  100% {
+    transform: scale(1) rotate(90deg);
+  }
+}

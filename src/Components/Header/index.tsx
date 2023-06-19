@@ -20,8 +20,8 @@ export default function Header() {
 					</li>
 				</ul>
 				<div className={'header__tertiary_column'}>
-					<span>Entrar</span>
-					<button>Abrir conta</button>
+					<span className={inter.className}>Entrar</span>
+					<button className={inter.className}>Abrir conta</button>
 				</div>
 			</div>
 	)
